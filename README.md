@@ -54,18 +54,22 @@ l'échelle.
 
 ### 1 Collecte et stockage des données des pré-publications via l’API BioRxiv
 Python,PyMongo,MongoDB 
+
 Script: import_rxiv_program.py
 
 ### 2 Collecte des informations de citations avec l’API OpenCitations. 
 Ajout de ces nouvelles variables aux documents (‘citations’ et ‘publiDate’) |Python, PyMongo, MongoDB 
+
 Script: add_citations.py
 
 ### 3 Calcul de nouvelles variables pour chaque document dans MongoDB
 Pipelines d’agrégations MongoDB, PyMongo
+
 Script: aggregations_mongodb.py
 
 ### 4 Création de collections thématiques par recherche plein-texte
 Elastic Search
+
 Script: elastic_search.py
 
 ### 5 Export et analyse exploratoire des données (variables numériques et catégorielles)
@@ -73,10 +77,12 @@ Scripts: R export_collection.py, exploratory_data_analysis.R
 
 ### 6 Encodage des titres et résumés des pré- publications avec un modèle Bert
 Spark- MongoDB connector, SparkNLP
+
 Script: bioBert_embeddings.py
 
 ### 7 Pré-traitement et transformation des variables pour l’apprentissage supervisé
 Spark-MongoDB connector
+
 Script: export_collection.py
 
 ### 8 Test et ajustement de différents modèles de classification binaire pour déterminer si une pré-publication sera publiée dans un journal dans la première année de son dépôt sur la plateforme d’archive.
